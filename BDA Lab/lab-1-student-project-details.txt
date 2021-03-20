@@ -152,4 +152,3 @@ cqlsh:students> SELECT * FROM project_details WHERE project_id =1 ORDER BY proje
 
 
 
-
