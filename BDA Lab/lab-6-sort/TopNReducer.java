@@ -35,7 +35,7 @@ protected void cleanup(Context context) throws IOException, InterruptedException
 Map<Text, IntWritable> sortedMap = MiscUtils.sortByValues(countMap);
 int counter = 0;
 for (Text key : sortedMap.keySet()) {
-if (counter++ == 20) {
+if (counter++ == 10) {
 break;
 }
 context.write(key, sortedMap.get(key));
