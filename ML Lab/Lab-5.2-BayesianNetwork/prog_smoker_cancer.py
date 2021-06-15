@@ -3,7 +3,8 @@ from pgmpy.models import BayesianModel
 from pgmpy.factors.discrete import TabularCPD
 from pgmpy.inference import VariableElimination
 
-cancer_model=BayesianModel([('Pollution','Cancer'),('Smoker','Cancer'),('Cancer','Xray'),('Cancer','Dyspnoea')])
+cancer_model=BayesianModel([('Pollution','Cancer'),('Smoker','Cancer'),
+                            ('Cancer','Xray'),('Cancer','Dyspnoea')])
 print('Bayesian network models are :')
 print('\t',cancer_model.nodes())
 print('Bayesian edges are:')
@@ -48,6 +49,7 @@ q=cancer_infer.query(variables=['Cancer'],evidence={'Smoker':1})
 print(q)
 
 print('\n Probablity of Cancer given smoker')
-q=cancer_infer.query(variables=['Cancer'],evidence={'Smoker':1,'Pollution':1})
+q=cancer_infer.query(variables=['Cancer'],evidence={'Smoker':1,
+                                                    'Pollution':1})
 print(q)
 
