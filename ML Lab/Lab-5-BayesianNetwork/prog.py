@@ -13,7 +13,8 @@ print(heartDisease.head())
 print('Attributes and datatypes')
 print(heartDisease.dtypes)
 
-model= BayesianModel([('age','Heartdisease'),('sex','Heartdisease'),('exang','Heartdisease'),('cp','Heartdisease'),('Heartdisease','restecg'),('Heartdisease','chol')])
+model= BayesianModel([('age','Heartdisease'),('sex','Heartdisease'),('exang','Heartdisease'),
+                      ('cp','Heartdisease'),('Heartdisease','restecg'),('Heartdisease','chol')])
 print('\nLearning CPD using Maximum likelihood estimators')
 model.fit(heartDisease,estimator=MaximumLikelihoodEstimator)
 
